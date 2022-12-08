@@ -1,3 +1,4 @@
+
 ## Problem Statement and Introduction
 
 Food classification is the focus of our study and we have used 3 datasets to catogorize food dishes into different classes. First dataset consists of various food groups such as rice, breads, milk etc. Second one classifies them based on various regions of the world. Third dataset has 101 classes comprising a variety of foods. Food categories are too broad especially when it deals with multi cuisine dishes. Other challenge is to make model learn from different type of images under same class. We have proposed different models to train the model and classify the images in desired classes. The another challenge we faced is imbalanced classes in dataset, for which we have tried many methods which are explained in this report. Problem statement is to train model to do classification of food and study the impact of different training setup in food classification application by interchanging different CNN models like ResNet18, DenseNet121 & MobileNetV2 and hyper parameters like learning rate, no of epochs, no of fc layer, batch size, activation function, dropouts, normalization, image transformation, optimizers, etc on 3 different datasets: Food101, Food11k & World-Cuisines
@@ -170,5 +171,13 @@ We used random search for hyperparameter optimization. Our search space consiste
 |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/dense/tsne.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/res/tsne.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/mobile/tsne.png) |
 
 
+## Class Activation Map
+
+<img src="https://portfolio-designs.s3.ap-south-1.amazonaws.com/outputs/outputs/bread1.jpg" alt="MarineGEO circle logo" width=200px/>
+
+<img src="https://portfolio-designs.s3.ap-south-1.amazonaws.com/outputs/outputs/bread2.jpg" alt="MarineGEO circle logo" width=200px/>
+
+<img src="https://portfolio-designs.s3.ap-south-1.amazonaws.com/outputs/outputs/fries1.jpg" alt="MarineGEO circle logo" width=200px/>
 
 
+<img src="https://portfolio-designs.s3.ap-south-1.amazonaws.com/outputs/outputs/fries2.jpg" alt="MarineGEO circle logo" width=200px/>
