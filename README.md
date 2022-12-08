@@ -1,12 +1,15 @@
-# COMP6721
-Project work for course COMP6721 : Introduction to AI Fall 2022
+<style>
+.row {
+  display: flex;
+}
 
-## Important Links
-
-Project Datasets : 
-- World Cuisine [Link](https://www.kaggle.com/datasets/abhijeetbhilare/world-cuisines?select=Dishes)
-- Food-101 [Link](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/)
-- Food-11 [Link](https://www.kaggle.com/datasets/trolukovich/food11-image-dataset?select=training)
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+} 
+}
+</style>
 
 ## Problem Statement and Introduction
 
@@ -58,11 +61,11 @@ We used random search for hyperparameter optimization. Our search space consiste
 
 #### Food-101
 
-| Model | Learning Rate| Batch Size |  Train acc.(%) | Validation acc.(%) | Test acc.(%) |
-| ------ | ------ | ------ | ------ | ------ | ------ |
-| Resnet18 | 0.0001 | 32 | 96.88 | 83.76 | 79.10 | 
-| Densenet121 | 0.0005 | 32 | 100 | 79.70 | 82.67 |
-| MobileNetv2 | 0.00001 | 32 | 100 | 94.19 | 96.67 |
+| Model | Learning Rate| Batch Size | Validation acc.(%) | Test acc.(%) |
+| ------ | ------ | ------ | ------ | ------ |
+| Resnet18 | 0.0001 | 32 | 83.76 | 79.10 | 
+| Densenet121 | 0.0005 | 32 | 79.70 | 82.67 |
+| MobileNetv2 | 0.00001 | 32 | 94.19 | 96.67 |
 
 <br>
 <br>
@@ -103,11 +106,11 @@ We used random search for hyperparameter optimization. Our search space consiste
 
 #### Food-11k
 
-| Model | Learning Rate| Batch Size |  Train acc.(%) | Validation acc.(%) | Test acc.(%) |
-| ------ | ------ | ------ | ------ | ------ | ------ |
-| Resnet18 | 0.0001 | 32 | 96.88 | 83.76 | 79.10 | 
-| Densenet121 | 0.0005 | 32 | 100 | 79.70 | 82.67 |
-| MobileNetv2 | 0.00001 | 32 | 100 | 94.19 | 96.67 |
+| Model | Learning Rate| Batch Size  | Validation acc.(%) | Test acc.(%) |
+| ------ | ------ | ------ | ------ | ------ |
+| Resnet18 | 0.0001 | 32  | 83.76 | 79.10 | 
+| Densenet121 | 0.0005 | 32 | 79.70 | 82.67 |
+| MobileNetv2 | 0.00001 | 32  | 94.19 | 96.67 |
 
 <br>
 <br>
@@ -132,7 +135,41 @@ We used random search for hyperparameter optimization. Our search space consiste
 
 | | | |
 | ------ | ------ | ------ |
-|![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/food11k/dense/conf.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/food11k/res/conf.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/food11k/tf_dt_mobilenet/conf.png) |
+|![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/food11k/dense/conf.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/food11k/res/conf.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/food11k/mobile/conf.png) |
+
+
+#### World Cuisine
+
+| Model | Learning Rate| Batch Size  | Validation acc.(%) | Test acc.(%) |
+| ------ | ------ | ------  | ------ | ------ |
+| Resnet18 | 0.0001 | 32 | 54.5 | 53.06 | 
+| Densenet121 | 0.0005 | 16 | 60.63 | 59.49 |
+| MobileNetv2 | 0.0001 | 32 | 60.13 | 44.46 |
+
+<br>
+<br>
+<center> <b>Accuracy</b> </center>
+
+
+| ResNet | DenseNet |  MobileNet |
+| ------ | ------ | ------ |
+|![](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/dense/acc.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/res/acc.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/mobile/acc.png) |
+
+<br>
+<center> <b>LOSS</b> </center>
+
+
+| | | |
+| ------ | ------ | ------ |
+|![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/dense/loss.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/res/loss.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/mobile/loss.png) |
+
+<br>
+<center> <b>Confusion Matrix</b> </center>
+
+
+| | | |
+| ------ | ------ | ------ |
+|![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/dense/conf.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/res/conf.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/mobile/conf.png) |
 
 
 
@@ -143,8 +180,7 @@ We used random search for hyperparameter optimization. Our search space consiste
 
 |  | |  |
 | ------ | ------ | ------ |
-|![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/food11k/dense/tsne.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/food11k/res/tsne.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/food11k/tf_dt_mobilenet/tsne.png) |
-
+|![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/dense/tsne.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/res/tsne.png) |![enter image description here](https://portfolio-designs.s3.ap-south-1.amazonaws.com/results/world/mobile/tsne.png) |
 
 
 
